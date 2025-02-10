@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@interfaces/*": ["src/shared/interfaces/*"],
+      "@functions/*": ["src/core/functions/*"],
+      "@middlewares": ["src/core/middlewares"],
+      "@middlewares/*": ["src/core/middlewares/*"],
+      "@constants": ["src/shared/constants"],
+      "@constants/*": ["src/shared/constants/*"],
+      "@schemas/*": ["src/shared/schemas/*"],
+      "@mappers/*": ["src/shared/mappers/*"],
+      "@config/*": ["src/config/*"],
+      "@libs/*": ["src/libs/*"],
+      "@models/*": ["src/shared/models/*"],
+      "@models": ["src/shared/models"],
+      "@types/*": ["src/shared/types/*"],
+      "@types": ["src/shared/types"],
+      "@services/*": ["src/core/services/*"],
+      "@services": ["src/core/services"],
+      "@helpers/*": ["src/shared/helpers/*"],
+      "@helpers": ["src/shared/helpers"],
+      "@enums/*": ["src/shared/enums/*"],
+      "@enums": ["src/shared/enums"],
+      "@utils/*": ["src/shared/utils/*"],
+      "@utils": ["src/shared/utils"],
+      "@test/*": ["src/test/*"]
+    }
+  }
+}

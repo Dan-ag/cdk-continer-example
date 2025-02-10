@@ -1,6 +1,55 @@
-*.ts
-!*.d.ts
+# These are some examples of commonly ignored file patterns.
+# You should customize this list as applicable to your project.
+# Learn more about .gitignore:
+#     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
-# CDK asset staging directory
-.cdk.staging
-cdk.out
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Serverless artifacts
+.serverless/
+.sls-next/
+.sls/
+.serverless-offline/
+
+# esbuild
+.esbuild/
+
+# TypeScript
+*.tsbuildinfo
+dist/
+
+# Logs
+*.log
+logs/
+*.out
+*.err
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# AWS credentials
+.aws-sam/
+.terraform/
+.terraform.lock.hcl
+
+# MacOS
+.DS_Store
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Other
+.idea/
+*.swp
+*.swo
+*.bak
+*.tmp
