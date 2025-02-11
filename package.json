@@ -13,8 +13,9 @@
     "mic_digital_microservices_v2": "bin/mic_digital_microservices_v2.js"
   },
   "scripts": {
+    "start": "node ./dist/app.js",
     "cdk": "cdk",
-    "build": "tsc",
+    "build": "tsc --noEmit false",
     "watch": "tsc -w",
     "test": "jest"
   },
