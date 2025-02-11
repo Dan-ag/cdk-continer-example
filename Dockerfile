@@ -2,6 +2,9 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
+RUN node -v
+RUN npm -v
+
 # 1. Instalar dependencias (incluyendo devDependencies)
 COPY package*.json ./
 RUN npm ci --include=dev
@@ -10,7 +13,7 @@ RUN npm ci --include=dev
 # 2. Copiar fuentes y compilar
 RUN chmod -R 777 /app
 COPY . .
-RUN npm run build || cat /app/npm-debug.log
+RUN ls -la /app/dist && cat /app/npm-debug.log || true
 RUN ls -la /app/dist
 
 # Stage 2: Runtime (imagen final optimizada)
