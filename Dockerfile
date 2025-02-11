@@ -4,7 +4,7 @@ WORKDIR /app
 
 # 1. Instalar dependencias (incluyendo devDependencies)
 COPY package*.json ./
-RUN npm ci --only=development --only=production
+RUN npm ci --include=dev
 
 
 # 2. Copiar fuentes y compilar
