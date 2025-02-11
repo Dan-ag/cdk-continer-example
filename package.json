@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.147",
+    "@types/aws-lambda-fastify": "^1.4.5",
     "@types/jest": "^29.5.14",
     "@types/node": "22.7.9",
     "aws-cdk": "2.177.0",
@@ -29,6 +30,7 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   },
   "dependencies": {
@@ -36,11 +38,14 @@
     "@aws-cdk/aws-lambda-nodejs": "^1.203.0",
     "@aws-cdk/aws-s3": "^1.203.0",
     "@aws-sdk/util-dynamodb": "^3.734.0",
+    "@fastify/aws-lambda": "^5.1.4",
     "aws-cdk-lib": "^2.177.0",
+    "aws-lambda-fastify": "^2.2.0",
     "aws-sdk": "^2.1692.0",
     "axios": "^1.7.9",
     "constructs": "^10.4.2",
     "convict": "^6.2.4",
+    "fastify": "^5.2.1",
     "zod": "^3.24.1"
   }
 }

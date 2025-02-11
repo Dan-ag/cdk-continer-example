@@ -1,11 +1,11 @@
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
 import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
 import { RetentionDays } from 'aws-cdk-lib/aws-logs';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Stack, StackProps } from 'aws-cdk-lib';
-import * as cdk from 'aws-cdk-lib';
+import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
+import * as cdk from 'aws-cdk-lib';
 
 export class MicDigitalMicroservicesV2Stack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -25,6 +25,9 @@ export class MicDigitalMicroservicesV2Stack extends Stack {
         minify: true,
         sourceMap: true,
       },
+      environment: {
+        AWS_LAMBDA: 'true'
+      }
     });
 
     // Api Gateway
