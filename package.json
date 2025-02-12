@@ -15,7 +15,7 @@
      "scripts": {
           "start": "node ./dist/app.js",
           "cdk": "cdk",
-          "build": "tsc",
+          "build": "tsc --noEmit false",
           "watch": "tsc -w",
           "test": "jest",
           "lint": "eslint '**/*.ts'",

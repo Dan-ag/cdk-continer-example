@@ -11,7 +11,6 @@ RUN npm ci --include=dev
 
 
 # 2. Copiar fuentes y compilar
-RUN chmod -R 777 /app
 COPY . .
 RUN npm run build
 RUN ls -la /app/dist && cat /app/npm-debug.log || true
