@@ -3,9 +3,7 @@ import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
 import { RetentionDays } from 'aws-cdk-lib/aws-logs';
 import * as lambda from 'aws-cdk-lib/aws-lambda';
 import { Stack, StackProps } from 'aws-cdk-lib';
-import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct } from 'constructs';
-import * as cdk from 'aws-cdk-lib';
 
 export class MicDigitalMicroservicesV2Stack extends Stack {
   constructor(scope: Construct, id: string, props?: StackProps) {
@@ -23,7 +21,7 @@ export class MicDigitalMicroservicesV2Stack extends Stack {
       logRetention: RetentionDays.ONE_DAY,
       bundling: {
         minify: true,
-        sourceMap: true,
+        sourceMap: true
       },
       environment: {
         AWS_LAMBDA: 'true'
@@ -33,7 +31,7 @@ export class MicDigitalMicroservicesV2Stack extends Stack {
     // Api Gateway
     const api = new LambdaRestApi(this, 'HelloApi', {
       handler: helloLambda,
-      proxy: false,
+      proxy: false
     });
 
     const helloResource = api.root.addResource('hello');

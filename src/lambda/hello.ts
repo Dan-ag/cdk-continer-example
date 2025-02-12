@@ -18,11 +18,9 @@ import fastify from '../app.js';
 
 let proxy: ReturnType<typeof awsLambdaFastify> | undefined;
 
-export const handler = async (
-  event: APIGatewayProxyEvent,
-  context: Context
-): Promise<unknown> => {
+export const handler = async (event: APIGatewayProxyEvent, context: Context): Promise<unknown> => {
   if (!proxy) {
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
     proxy = awsLambdaFastify(fastify);
     await fastify.ready();
   }
