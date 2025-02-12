@@ -1,63 +1,64 @@
 {
-     "name": "mic_digital_microservices_v2",
-     "version": "0.1.0",
-     "description": "",
-     "author": "Joan Harriman Navarro Machado",
-     "keywords": [],
-     "license": "ISC",
-     "type": "module",
-     "engines": {
-          "node": ">=22.0.0"
-     },
-     "bin": {
-          "mic_digital_microservices_v2": "bin/mic_digital_microservices_v2.js"
-     },
-     "scripts": {
-          "start": "node ./dist/app.js",
-          "cdk": "cdk",
-          "build": "tsc --noEmit false",
-          "watch": "tsc -w",
-          "test": "jest",
-          "lint": "eslint '**/*.ts'",
-          "lint:version": "eslint --version",
-          "test:keploy": "jest --coverage --coverageReporters=text --coverageReporters=cobertura --collectCoverageFrom='./**/*.{js,jsx,ts,tsx}'"
-     },
-     "devDependencies": {
-          "@eslint/js": "^9.20.0",
-          "@types/aws-lambda": "^8.10.147",
-          "@types/aws-lambda-fastify": "^1.4.5",
-          "@types/jest": "^29.5.14",
-          "@types/node": "22.7.9",
-          "@typescript-eslint/parser": "^8.24.0",
-          "aws-cdk": "2.177.0",
-          "cross-env": "^7.0.3",
-          "esbuild": "^0.24.2",
-          "eslint": "^9.20.1",
-          "eslint-plugin-prettier": "^5.2.3",
-          "globals": "^15.14.0",
-          "jest": "^29.7.0",
-          "prettier": "^3.5.0",
-          "standard": "^17.1.2",
-          "ts-jest": "^29.2.5",
-          "ts-node": "^10.9.2",
-          "tsconfig-paths": "^4.2.0",
-          "tsx": "^4.19.2",
-          "typescript": "^5.7.3",
-          "typescript-eslint": "^8.24.0"
-     },
-     "dependencies": {
-          "@aws-cdk/aws-lambda": "^1.203.0",
-          "@aws-cdk/aws-lambda-nodejs": "^1.203.0",
-          "@aws-cdk/aws-s3": "^1.203.0",
-          "@aws-sdk/util-dynamodb": "^3.734.0",
-          "@fastify/aws-lambda": "^5.1.4",
-          "aws-cdk-lib": "^2.177.0",
-          "aws-lambda-fastify": "^2.2.0",
-          "aws-sdk": "^2.1692.0",
-          "axios": "^1.7.9",
-          "constructs": "^10.4.2",
-          "convict": "^6.2.4",
-          "fastify": "^5.2.1",
-          "zod": "^3.24.1"
-     }
+  "name": "mic_digital_microservices_v2",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Joan Harriman Navarro Machado",
+  "keywords": [],
+  "license": "ISC",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "bin": {
+    "mic_digital_microservices_v2": "bin/mic_digital_microservices_v2.js"
+  },
+  "scripts": {
+    "start": "node ./dist/app.js",
+    "cdk": "cdk",
+    "build": "rm -rf dist && rm -rf dist tsconfig.tsbuildinfo && npx tsc",
+    "build:version": "tsc --version",
+    "watch": "tsc -w",
+    "test": "jest",
+    "lint": "eslint '**/*.ts'",
+    "lint:version": "eslint --version",
+    "test:keploy": "jest --coverage --coverageReporters=text --coverageReporters=cobertura --collectCoverageFrom='./**/*.{js,jsx,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@types/aws-lambda": "^8.10.147",
+    "@types/aws-lambda-fastify": "^1.4.5",
+    "@types/jest": "^29.5.14",
+    "@types/node": "22.7.9",
+    "@typescript-eslint/parser": "^8.24.0",
+    "aws-cdk": "2.177.0",
+    "cross-env": "^7.0.3",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.20.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.14.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.0",
+    "standard": "^17.1.2",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.24.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-lambda": "^1.203.0",
+    "@aws-cdk/aws-lambda-nodejs": "^1.203.0",
+    "@aws-cdk/aws-s3": "^1.203.0",
+    "@aws-sdk/util-dynamodb": "^3.734.0",
+    "@fastify/aws-lambda": "^5.1.4",
+    "aws-cdk-lib": "^2.177.0",
+    "aws-lambda-fastify": "^2.2.0",
+    "aws-sdk": "^2.1692.0",
+    "axios": "^1.7.9",
+    "constructs": "^10.4.2",
+    "convict": "^6.2.4",
+    "fastify": "^5.2.1",
+    "zod": "^3.24.1"
+  }
 }
