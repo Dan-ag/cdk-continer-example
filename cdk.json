@@ -18,13 +18,10 @@
   },
   "context": {
     "aws-cdk:enableLookups": "false",
-    "aws:cdk:localstack": {
-      "enabled": true,
-      "endpoint": "http://localhost:4566"
-    },
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
+      "aws",
       "aws-cn"
     ],
     "@aws-cdk-containers/ecs-service-extensions:enableDefaultLogDriver": true,
