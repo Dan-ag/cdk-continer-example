@@ -47,7 +47,7 @@ fastify.get('/', async (_request, _reply) => {
 
 // Definición de la ruta /hello
 fastify.get('/hello', async (request, _reply) => {
-  return { message: 'Hello lamdba!', input: request };
+  return { message: 'Hello lamdba!', input: { body: request.body, query: request.query, heders: request.headers } };
   // return { message: 'Hello lamdba!', input: request };
 });
 
